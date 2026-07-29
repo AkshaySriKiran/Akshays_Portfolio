@@ -569,10 +569,7 @@ a:hover {
 }
 
 .cert-list li {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding: 1rem 0;
+  padding: 0;
   border-top: 1px solid var(--line);
 }
 
@@ -580,14 +577,32 @@ a:hover {
   border-bottom: 1px solid var(--line);
 }
 
-.cert-list li span:first-child {
+.cert-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 0;
+  text-decoration: none;
+  transition: color 0.25s var(--ease), padding-left 0.3s var(--ease);
+}
+
+.cert-link:hover {
+  padding-left: 0.4rem;
+  color: var(--cyan-deep);
+}
+
+.cert-name {
   font-weight: 600;
 }
 
-.cert-list li span:last-child {
+.cert-org {
   color: var(--ink-soft);
   font-size: 0.92rem;
   font-family: var(--font-mono);
+}
+
+.cert-link:hover .cert-org {
+  color: var(--cyan);
 }
 
 .contact {
@@ -739,7 +754,7 @@ a:hover {
     gap: 0 2rem;
   }
 
-  .cert-list li {
+  .cert-link {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
