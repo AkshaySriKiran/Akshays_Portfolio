@@ -33,11 +33,49 @@
     <main id="main">
       <section class="hero" id="top" aria-label="Introduction">
         <div class="hero-media" aria-hidden="true">
-          <div class="hero-nodes"></div>
+          <div class="hero-grid-ml"></div>
+          <svg class="hero-net" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+            <g class="net-links" fill="none" stroke-linecap="round">
+              <path d="M120 160 L320 220 L520 140 L760 260 L980 180" />
+              <path d="M140 420 L340 360 L540 440 L780 340 L1000 420" />
+              <path d="M100 640 L300 560 L520 620 L740 520 L960 600" />
+              <path d="M320 220 L340 360 L300 560" />
+              <path d="M520 140 L540 440 L520 620" />
+              <path d="M760 260 L780 340 L740 520" />
+              <path d="M320 220 L540 440 L780 340" />
+              <path d="M340 360 L520 140 L780 340 L520 620" />
+            </g>
+            <g class="net-nodes">
+              <circle cx="120" cy="160" r="5" />
+              <circle cx="140" cy="420" r="4" />
+              <circle cx="100" cy="640" r="5" />
+              <circle cx="320" cy="220" r="7" />
+              <circle cx="340" cy="360" r="6" />
+              <circle cx="300" cy="560" r="6" />
+              <circle cx="520" cy="140" r="8" />
+              <circle cx="540" cy="440" r="7" />
+              <circle cx="520" cy="620" r="6" />
+              <circle cx="760" cy="260" r="7" />
+              <circle cx="780" cy="340" r="8" />
+              <circle cx="740" cy="520" r="6" />
+              <circle cx="980" cy="180" r="5" />
+              <circle cx="1000" cy="420" r="6" />
+              <circle cx="960" cy="600" r="5" />
+            </g>
+          </svg>
           <div class="hero-scan"></div>
+          <div class="hero-tokens">
+            <span>model.fit()</span>
+            <span>inference</span>
+            <span>embeddings</span>
+            <span>gradient↓</span>
+            <span>AUC · F1</span>
+          </div>
         </div>
         <div class="hero-content">
-          <p class="hero-kicker" data-reveal>AI · Machine Learning · Intelligent Systems</p>
+          <p class="hero-kicker" data-reveal>
+            <span>AI</span><span>Machine Learning</span><span>Intelligent Systems</span>
+          </p>
           <p class="hero-brand" data-reveal>Akshay Sri Kiran Ryali</p>
           <h1 class="hero-title" data-reveal>
             Building models and intelligent tools that turn data into decisions.
