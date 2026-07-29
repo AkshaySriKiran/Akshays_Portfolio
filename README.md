@@ -19,9 +19,3 @@ Then visit [http://localhost:8000](http://localhost:8000).
 - [spotycharts](https://github.com/AkshaySriKiran/spotycharts)
 - [IDP-python-env](https://github.com/AkshaySriKiran/IDP-python-env)
 - [ML (Clickbait Detection)](https://github.com/AkshaySriKiran/ML)
-
-To publish the three coursework projects as separate repos from a local `projects/` copy:
-
-```bash
-bash scripts/publish-separate-repos.sh
-```
