@@ -15,7 +15,6 @@ Then visit [http://localhost:8000](http://localhost:8000).
 ## Contents
 
 - Education (NJIT MS, RIET B.Tech)
-- Current / AI projects (IDP, Coffee Shop)
-- Selected projects (clickbait ML, e-commerce, library system)
+- AI/ML projects only (IDP, NJIT AI/Big Data coursework, Colab ML notebook, clickbait ensemble ML)
 - AI-first skills and certifications
 - Contact links (email, LinkedIn, GitHub, phone)
