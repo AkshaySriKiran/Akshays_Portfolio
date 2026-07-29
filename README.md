@@ -1,6 +1,6 @@
-# Akshay Sri Kiran Ryali — Portfolio
+# Akshay Sri Kiran Ryali — AI & ML Portfolio
 
-Personal portfolio site for sharing education, projects, skills, and contact details with recruiters.
+Personal portfolio site for sharing AI/ML-focused projects, education, skills, and contact details with recruiters. No external images — CSS-only visual theme.
 
 ## Preview locally
 
@@ -15,7 +15,7 @@ Then visit [http://localhost:8000](http://localhost:8000).
 ## Contents
 
 - Education (NJIT MS, RIET B.Tech)
-- Current projects (OmniParse IDP, Coffee Shop)
-- Selected projects (e-commerce, library system, clickbait ML)
-- Skills and certifications
+- Current / AI projects (IDP, Coffee Shop)
+- Selected projects (clickbait ML, e-commerce, library system)
+- AI-first skills and certifications
 - Contact links (email, LinkedIn, GitHub, phone)
