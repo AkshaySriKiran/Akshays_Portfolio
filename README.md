@@ -1,10 +1,14 @@
 # Akshay Sri Kiran Ryali — AI & ML Portfolio
 
-Personal portfolio site for sharing AI/ML-focused projects, education, skills, and contact details with recruiters. No external images — CSS-only visual theme.
+Personal portfolio site for sharing AI/ML-focused projects, education, skills, and contact details with recruiters.
+
+## Live site
+
+After GitHub Pages is enabled on `main`:
+
+**https://akshaysrikiran.github.io/Akshays_Portfolio/**
 
 ## Preview locally
-
-Open `index.html` in a browser, or serve the folder:
 
 ```bash
 python3 -m http.server 8000
