@@ -12,9 +12,12 @@ python3 -m http.server 8000
 
 Then visit [http://localhost:8000](http://localhost:8000).
 
-## Contents
+## Project source code
 
-- Education (NJIT MS, RIET B.Tech)
-- AI/ML projects only (IDP, Song Popularity + Recommendation, Video Game Popularity Prediction, SpotyCharts, clickbait ensemble ML)
-- AI-first skills and certifications
-- Contact links (email, LinkedIn, GitHub, phone)
+Notebooks and project folders live under [`projects/`](./projects):
+
+- [`projects/song-popularity-recommendation`](./projects/song-popularity-recommendation)
+- [`projects/video-game-popularity-prediction`](./projects/video-game-popularity-prediction)
+- [`projects/spotycharts`](./projects/spotycharts) — add local MapReduce / Power BI files from your machine
+- Clickbait ML: https://github.com/AkshaySriKiran/ML
+- IDP: https://github.com/AkshaySriKiran/IDP-python-env
