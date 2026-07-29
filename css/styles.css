@@ -1,13 +1,15 @@
 :root {
-  --ink: #0b1220;
-  --ink-soft: #445066;
-  --paper: #f4f7fb;
-  --paper-2: #e8eef6;
-  --line: rgba(11, 18, 32, 0.12);
-  --cyan: #0e8f9f;
-  --cyan-deep: #0a6b78;
-  --signal: #0aa4b5;
-  --accent: #d97706;
+  --ink: #101018;
+  --ink-soft: #4a4f63;
+  --paper: #f3f4f8;
+  --paper-2: #e8eaf0;
+  --line: rgba(16, 16, 24, 0.12);
+  --cyan: #00b7c7;
+  --cyan-deep: #0891a0;
+  --signal: #00d4c8;
+  --magenta: #ff3d7a;
+  --neon: #5ef2ff;
+  --accent: #ff3d7a;
   --white: #ffffff;
   --radius: 2px;
   --font-display: "Sora", "Segoe UI", sans-serif;
@@ -30,8 +32,8 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(900px 480px at 0% 0%, rgba(14, 143, 159, 0.12), transparent 55%),
-    radial-gradient(700px 420px at 100% 8%, rgba(217, 119, 6, 0.08), transparent 50%),
+    radial-gradient(900px 480px at 0% 0%, rgba(0, 183, 199, 0.08), transparent 55%),
+    radial-gradient(700px 420px at 100% 8%, rgba(255, 61, 122, 0.05), transparent 50%),
     linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
   font-family: var(--font-display);
   font-size: 1.02rem;
@@ -136,20 +138,29 @@ a:hover {
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(900px 500px at 85% 20%, rgba(14, 164, 181, 0.16), transparent 55%),
-    radial-gradient(700px 420px at 10% 80%, rgba(14, 164, 181, 0.08), transparent 50%),
-    linear-gradient(145deg, #141414 0%, #1f1f1f 48%, #2b2b2b 100%);
+    radial-gradient(800px 420px at 88% 18%, rgba(255, 61, 122, 0.14), transparent 55%),
+    radial-gradient(700px 460px at 12% 78%, rgba(0, 212, 200, 0.12), transparent 52%),
+    linear-gradient(155deg, #0a0a0f 0%, #12121a 42%, #1a1a24 100%);
+}
+
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(10, 10, 15, 0.72) 0%, rgba(10, 10, 15, 0.35) 48%, transparent 72%);
+  pointer-events: none;
 }
 
 .hero-grid-ml {
   position: absolute;
   inset: 0;
-  opacity: 0.35;
+  opacity: 0.4;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(circle at 70% 35%, #000 0%, transparent 72%);
+    linear-gradient(rgba(94, 242, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 61, 122, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at 72% 32%, #000 0%, transparent 70%);
   animation: grid-drift 24s linear infinite;
 }
 
@@ -158,35 +169,37 @@ a:hover {
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.7;
+  opacity: 0.78;
   pointer-events: none;
 }
 
 .hero-net .net-links path {
-  stroke: rgba(14, 164, 181, 0.35);
-  stroke-width: 1.4;
-  stroke-dasharray: 8 10;
+  stroke: rgba(0, 212, 200, 0.38);
+  stroke-width: 1.35;
+  stroke-dasharray: 6 12;
   animation: link-flow 7s linear infinite;
 }
 
 .hero-net .net-links path:nth-child(odd) {
   animation-duration: 9s;
-  stroke: rgba(180, 180, 180, 0.28);
+  stroke: rgba(255, 61, 122, 0.28);
 }
 
 .hero-net .net-nodes circle {
-  fill: #0aa4b5;
-  filter: drop-shadow(0 0 6px rgba(14, 164, 181, 0.45));
+  fill: #00d4c8;
+  filter: drop-shadow(0 0 5px rgba(0, 212, 200, 0.5));
   animation: node-pulse 3.2s var(--ease) infinite alternate;
 }
 
 .hero-net .net-nodes circle:nth-child(3n) {
-  fill: #d0d0d0;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.25));
+  fill: #ff3d7a;
+  filter: drop-shadow(0 0 5px rgba(255, 61, 122, 0.45));
   animation-delay: -1s;
 }
 
 .hero-net .net-nodes circle:nth-child(4n) {
+  fill: #5ef2ff;
+  filter: drop-shadow(0 0 4px rgba(94, 242, 255, 0.4));
   animation-delay: -2s;
 }
 
@@ -197,10 +210,10 @@ a:hover {
     0deg,
     transparent,
     transparent 3px,
-    rgba(255, 255, 255, 0.012) 3px,
-    rgba(255, 255, 255, 0.012) 4px
+    rgba(94, 242, 255, 0.015) 3px,
+    rgba(94, 242, 255, 0.015) 4px
   );
-  opacity: 0.65;
+  opacity: 0.7;
   animation: scan-drift 18s linear infinite;
 }
 
@@ -209,22 +222,25 @@ a:hover {
   inset: 0;
   pointer-events: none;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
-  color: rgba(180, 230, 236, 0.55);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: rgba(94, 242, 255, 0.5);
+  text-transform: uppercase;
 }
 
 .hero-tokens span {
   position: absolute;
   white-space: nowrap;
+  border-left: 2px solid rgba(255, 61, 122, 0.55);
+  padding-left: 0.45rem;
   animation: token-float 10s var(--ease) infinite alternate;
 }
 
-.hero-tokens span:nth-child(1) { top: 18%; right: 12%; animation-delay: 0s; }
+.hero-tokens span:nth-child(1) { top: 18%; right: 12%; animation-delay: 0s; color: rgba(0, 212, 200, 0.55); }
 .hero-tokens span:nth-child(2) { top: 34%; right: 28%; animation-delay: -2s; }
-.hero-tokens span:nth-child(3) { top: 58%; right: 10%; animation-delay: -4s; }
+.hero-tokens span:nth-child(3) { top: 58%; right: 10%; animation-delay: -4s; color: rgba(255, 61, 122, 0.55); }
 .hero-tokens span:nth-child(4) { top: 72%; right: 26%; animation-delay: -1s; }
-.hero-tokens span:nth-child(5) { top: 46%; right: 8%; animation-delay: -3s; }
+.hero-tokens span:nth-child(5) { top: 46%; right: 8%; animation-delay: -3s; color: rgba(0, 212, 200, 0.55); }
 
 .hero-content {
   position: relative;
@@ -242,14 +258,20 @@ a:hover {
 
 .hero-kicker span {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #9ee7ef;
-  border: 1px solid rgba(14, 164, 181, 0.45);
-  background: rgba(14, 164, 181, 0.1);
+  color: #5ef2ff;
+  border: 1px solid rgba(0, 212, 200, 0.4);
+  background: rgba(0, 212, 200, 0.08);
   padding: 0.28rem 0.55rem;
+}
+
+.hero-kicker span:nth-child(2) {
+  color: #ff8fb3;
+  border-color: rgba(255, 61, 122, 0.4);
+  background: rgba(255, 61, 122, 0.08);
 }
 
 .hero-brand {
@@ -259,6 +281,7 @@ a:hover {
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.03em;
+  text-shadow: 0 0 28px rgba(0, 212, 200, 0.12);
 }
 
 .hero-title {
@@ -267,13 +290,15 @@ a:hover {
   font-size: clamp(1.15rem, 2.3vw, 1.5rem);
   font-weight: 500;
   line-height: 1.4;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.9);
+  border-left: 3px solid var(--magenta);
+  padding-left: 0.85rem;
 }
 
 .hero-lede {
   margin: 0 0 1.75rem;
   max-width: 44ch;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(220, 225, 235, 0.72);
   font-size: 1rem;
   font-weight: 400;
 }
@@ -305,23 +330,24 @@ a:hover {
 
 .btn-primary {
   background: var(--signal);
-  color: var(--ink);
+  color: #061014;
+  box-shadow: 0 0 0 1px rgba(0, 212, 200, 0.35);
 }
 
 .btn-primary:hover {
-  background: #2bb8c7;
-  color: var(--ink);
+  background: #2de8dc;
+  color: #061014;
 }
 
 .btn-ghost {
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 61, 122, 0.45);
   color: var(--white);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 61, 122, 0.06);
 }
 
 .btn-ghost:hover {
-  border-color: rgba(255, 255, 255, 0.75);
-  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 61, 122, 0.8);
+  background: rgba(255, 61, 122, 0.14);
   color: var(--white);
 }
 
@@ -565,12 +591,14 @@ a:hover {
 }
 
 .contact {
-  background: linear-gradient(155deg, #1a1a1a 0%, #2a2a2a 55%, #3a3a3a 100%);
+  background:
+    radial-gradient(700px 360px at 90% 10%, rgba(255, 61, 122, 0.12), transparent 55%),
+    linear-gradient(155deg, #0a0a0f 0%, #14141c 55%, #1a1a24 100%);
   color: var(--white);
 }
 
 .contact .eyebrow {
-  color: #c8c8c8;
+  color: #5ef2ff;
 }
 
 .contact .section-lede {
