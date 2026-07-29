@@ -12,12 +12,16 @@ python3 -m http.server 8000
 
 Then visit [http://localhost:8000](http://localhost:8000).
 
-## Project source code
+## Project repositories
 
-Notebooks and project folders live under [`projects/`](./projects):
+- [song-popularity-recommendation](https://github.com/AkshaySriKiran/song-popularity-recommendation)
+- [video-game-popularity-prediction](https://github.com/AkshaySriKiran/video-game-popularity-prediction)
+- [spotycharts](https://github.com/AkshaySriKiran/spotycharts)
+- [IDP-python-env](https://github.com/AkshaySriKiran/IDP-python-env)
+- [ML (Clickbait Detection)](https://github.com/AkshaySriKiran/ML)
 
-- [`projects/song-popularity-recommendation`](./projects/song-popularity-recommendation)
-- [`projects/video-game-popularity-prediction`](./projects/video-game-popularity-prediction)
-- [`projects/spotycharts`](./projects/spotycharts) — add local MapReduce / Power BI files from your machine
-- Clickbait ML: https://github.com/AkshaySriKiran/ML
-- IDP: https://github.com/AkshaySriKiran/IDP-python-env
+To publish the three coursework projects as separate repos from a local `projects/` copy:
+
+```bash
+bash scripts/publish-separate-repos.sh
+```
