@@ -136,8 +136,7 @@ a:hover {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background:
-    linear-gradient(135deg, #0d3f3c 0%, #1a4d55 42%, #2f5d4a 78%, #6d8a5b 100%);
+  background-color: #1a4d55;
   background-image:
     linear-gradient(135deg, rgba(13, 63, 60, 0.55), rgba(26, 77, 85, 0.35)),
     url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=2200&q=80");
