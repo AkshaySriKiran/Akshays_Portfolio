@@ -636,14 +636,43 @@ a:hover {
   transform: none;
 }
 
-@keyframes nodes-pulse {
+@keyframes grid-drift {
   from {
-    opacity: 0.4;
-    transform: scale(1);
+    transform: translateY(0);
   }
   to {
-    opacity: 0.7;
-    transform: scale(1.02);
+    transform: translateY(56px);
+  }
+}
+
+@keyframes link-flow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -120;
+  }
+}
+
+@keyframes node-pulse {
+  from {
+    opacity: 0.55;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@keyframes token-float {
+  from {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+  to {
+    transform: translateY(-14px);
+    opacity: 0.75;
   }
 }
 
@@ -719,19 +748,15 @@ a:hover {
   }
 }
 
-
-@media (max-width: 719px) {
-  .hero-tokens {
-    display: none;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 
-  .hero-nodes,
+  .hero-grid-ml,
+  .hero-net .net-links path,
+  .hero-net .net-nodes circle,
+  .hero-tokens span,
   .hero-scan,
   [data-reveal],
   .btn,
