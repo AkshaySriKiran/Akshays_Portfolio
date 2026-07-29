@@ -10,11 +10,12 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const reveals = document.querySelectorAll("[data-reveal]");
+  const reveals = Array.from(document.querySelectorAll("[data-reveal]"));
+  const show = (el) => el.classList.add("is-visible");
 
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (reduceMotion || !("IntersectionObserver" in window)) {
-    reveals.forEach((el) => el.classList.add("is-visible"));
+    reveals.forEach(show);
     return;
   }
 
@@ -22,15 +23,22 @@
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
+        show(entry.target);
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
+    { threshold: 0.01, rootMargin: "0px 0px 40px 0px" }
   );
 
   reveals.forEach((el, index) => {
-    el.style.transitionDelay = `${Math.min(index % 5, 4) * 70}ms`;
+    el.style.transitionDelay = `${Math.min(index % 5, 4) * 50}ms`;
     observer.observe(el);
   });
+
+  // Mobile Safari / delayed layout fallback — never leave content invisible
+  window.setTimeout(() => {
+    reveals.forEach((el) => {
+      if (!el.classList.contains("is-visible")) show(el);
+    });
+  }, 600);
 })();
